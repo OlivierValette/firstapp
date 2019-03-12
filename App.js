@@ -84,7 +84,9 @@ export default class App extends React.Component {
                         <Card>
                             <CardItem header bordered>
                                 <Text style={{ color: '#007e59', fontSize: 18, fontWeight: 'bold' }}>
-                                    {this.state.amount * this.state.rates[this.state.to] / this.state.rates[this.state.from]}
+                                    { (this.state.amount
+                                        * this.state.rates[this.state.to]
+                                        / this.state.rates[this.state.from]).toFixed(3) }
                                 </Text>
                             </CardItem>
                         </Card>
